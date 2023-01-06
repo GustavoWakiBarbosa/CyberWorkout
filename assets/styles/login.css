@@ -2,6 +2,7 @@
     --cor-degrade: linear-gradient(132deg, #8c52ff 39%, #ff66c4 100%);
     --roxo-fundo: #8c52ff;;
     --roxo-escuro: #230F32;
+    --rosa-escuro:#770449;
     --branco: #FFFFFF;
     --rosa:#ff66c4;
     --fonte: 'Poppins';
@@ -26,13 +27,18 @@ main{
     justify-content: center;
 }
 
+.esconder-secao{
+  display: none;
+}
+
 .principal{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: #230F32;
+    background-color: var(--roxo-escuro);
+    /* background-color:#770449; */
     width:90%;
     height: auto;
     padding: 2em;
