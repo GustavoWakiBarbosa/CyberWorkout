@@ -1,9 +1,9 @@
 ![Design sem nome (5)](https://user-images.githubusercontent.com/90512847/211675509-3b07f3c7-a88b-40e4-9b94-a29225477707.png)
-# 🟣 **CyberWorkout**
+# 💜 **CyberWorkout**
 
 Este projeto tem como intuito ser meu futuro TCC para minha graduação, esta é apenas uma versão de teste e preliminar com o principal objetivo de praticar minhas habilidades com HTML, CSS e JS. Eu planejo estar aperfeiçoando o projeto durante todo o decorrer do curso e também estar adaptando ele utilizando outras ferramentas, como frameworks.
 
-## ❓ O que é CyberWorkout?
+## 🤔 O que é CyberWorkout?
 CyberWorkout irá ser uma plataforma em que irá auxiliar todos personais de musculação e seus respectivos alunos, tem como objetivo possuir as funcionalidades de criar treinos e juntamente com isto poder observar todo o desempenho. A plataforma deve ser excelente para ambos, trazendo funcionalidades e designs muito intuitivos e práticos.
 
 ## 👨‍💻 Tecnologias utilizadas
