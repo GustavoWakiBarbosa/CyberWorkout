@@ -27,7 +27,12 @@ CyberWorkout irá ser uma plataforma em que irá auxiliar todos personais de mus
 # 📁 Acesso ao projeto
 https://gustavowakibarbosa.github.io/CyberWorkout/
 
-## 🟣 Imagem do Projeto
+## 🟣 Projeto:
 ![image](https://user-images.githubusercontent.com/90512847/211674467-dacd388a-87ad-4f71-8c63-57dc6429651c.png)
+
+
+https://user-images.githubusercontent.com/90512847/212128962-a8de498d-1cba-473c-b266-8ff7f851d038.mp4
+
+
 
 ![status (1)](https://user-images.githubusercontent.com/90512847/211675516-04c71320-8ce0-4c26-b8b0-0c27006bf793.png)
