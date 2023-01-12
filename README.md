@@ -30,8 +30,9 @@ https://gustavowakibarbosa.github.io/CyberWorkout/
 ## 🟣 Projeto:
 ![image](https://user-images.githubusercontent.com/90512847/211674467-dacd388a-87ad-4f71-8c63-57dc6429651c.png)
 
+![Video_230112134515](https://user-images.githubusercontent.com/90512847/212129371-6d891e19-1110-4ec9-97f6-20aaaa950fe0.gif)
 
-https://user-images.githubusercontent.com/90512847/212128962-a8de498d-1cba-473c-b266-8ff7f851d038.mp4
+
 
 
 
