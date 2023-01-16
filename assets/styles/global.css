@@ -1,0 +1,21 @@
+:root{
+    --cor-degrade: linear-gradient(132deg, #8c52ff 39%, #ff66c4 100%);
+    --roxo-fundo: #8c52ff;
+    --rosa-fundo: #430e33;
+    --roxo-escuro: #230F32;
+    --rosa-escuro:#770449;
+    --branco: #FFFFFF;
+    --rosa:#ff66c4;
+    --cinza: #31322C;
+    --cinza-claro: #fcf7f7;
+    --fonte: 'Poppins';
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: var(--fonte);
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 500;
+}

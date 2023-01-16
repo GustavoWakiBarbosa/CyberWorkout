@@ -4,14 +4,19 @@ const areaLogin = document.querySelector(".area-login")
 const registro = document.querySelector(".registrar")
 const principal = document.querySelector(".principal")
 ////////////////TRATAMENTO DE ERRO AO LOGAR////////////////
-const email = document.querySelector("#email")
-const senha = document.querySelector("#senha")
+const email = document.querySelector(".email")
+const senha = document.querySelector(".senha")
 const btnEntrar = document.querySelector(".btn-entrar")
 const selecao = document.querySelector(".selecionar-conta")
 const modal = document.querySelector(".modal")
 const logo = document.querySelector(".logo")
 const btnTn = document.querySelector(".btn-tn")
 ////////////////////////////////////////////////////////////
+
+function retirarBordaDeErro(){
+    email.classList.remove("teste")
+    senha.classList.remove("teste")
+}
 
 professor.addEventListener("click", () => {
     areaLogin.style.display = "flex";
@@ -26,11 +31,18 @@ aluno.addEventListener("click", () => {
 })
 
 btnEntrar.addEventListener("click", () => {
-    if(email.value === "ciencia@gmail.com" && senha.value === "123"){
-        console.log("ta certo")
+    if(email.value === "teste@gmail.com" && senha.value === "123"){
+        window.location.href = "../index.html";
     }else if(email.value === "" && senha.value === ""){
-        email.style.borderColor = "red"
-        senha.style.borderColor = "red"
+        email.classList.add("teste")
+        senha.classList.add("teste")
+        setTimeout(() => {  retirarBordaDeErro(); }, 2000);
+    }else if(email.value === ""){
+        email.classList.add("teste")
+        setTimeout(() => {  retirarBordaDeErro(); }, 2000);
+    }else if(senha.value === ""){
+        senha.classList.add("teste")
+        setTimeout(() => {  retirarBordaDeErro(); }, 2000);
     }else{
         selecao.style.display = "none"
         areaLogin.style.display = "none"
