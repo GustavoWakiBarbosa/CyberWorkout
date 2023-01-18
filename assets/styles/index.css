@@ -5,10 +5,7 @@ main{
 body{
     width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-areas: 
-    ""
-    ;
+    background-color: var(--roxo-escuro);
 }
 
 header{
@@ -81,3 +78,106 @@ a{
     border-radius: 10px;
 }
 
+/* /////////////////////////////
+           MODAL
+ ///////////////////////////// */
+
+ #modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+    background-color: var(--rosa-fundo);
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "texto texto"
+    "cancelar criar"
+    ;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 2em;
+    width: 90%; 
+    text-align: center;
+ }
+
+ .titulo{
+    grid-area: titulo;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+ }
+
+   #nome-pasta {
+    grid-area: texto;
+    width: auto;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid var(--branco);
+    caret-color: var(--branco);
+    background-color: var(--roxo-escuro);
+    padding: 0.5em;
+    transition: .5s linear;
+    font-family: var(--fonte);
+    letter-spacing: 1px;
+  }
+  
+  #nome-pasta:focus {
+    border: 2px solid var(--rosa);
+    caret-color: var(--rosa);
+    color: var(--rosa);
+    box-shadow: 4px 4px 10px #070707;
+  }
+  
+  #nome-pastafocus::placeholder {
+    color: var(--rosa);
+    font: var(--fonte);
+  }
+
+ #button-cancelar{
+    background-color: var(--roxo-escuro);
+    grid-area: cancelar;
+    width: auto;
+ }
+
+ #button-criar{
+    background-color: var(--roxo-escuro);
+    grid-area: criar;
+ }
+
+ .botoes{
+    border: none;
+    padding: 0.5em;
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: 0.2s;
+ }
+
+ .botoes:active{
+    opacity: 1;
+ }
+ 
+
+ #fade{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000099;
+    z-index: 5;
+ }
+
+ #fade,
+ #modal {
+   transition: 0.5s;
+   opacity: 1;
+   pointer-events: all;
+ }
+ 
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events:all;
+}
