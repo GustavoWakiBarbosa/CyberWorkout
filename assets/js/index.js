@@ -1,15 +1,12 @@
-const buttonOpenModal = document.querySelector(".button-pasta")
-const buttonCloseModal = document.querySelector("#button-cancelar")
-const modal = document.querySelector("#modal")
-const fade = document.querySelector("#fade")
+const button = document.querySelector('.button-pasta');
+const buttonF = document.querySelector('#button-cancelar')
+const container = document.querySelector('.modal-container');
+const modal = document.querySelector('.modal');
 
-const lista = [buttonOpenModal, buttonCloseModal, fade]
+button.addEventListener('click', () => {
+    container.classList.add("modal-show")
+})
 
-function toggleModal() {
-    modal.classList.toggle("hide")
-    fade.classList.toggle("hide")
-}
-
-lista.forEach((element) => {
-    element.addEventListener("click", () => toggleModal())
+buttonF.addEventListener('click', () => {
+    container.classList.remove("modal-show")
 })

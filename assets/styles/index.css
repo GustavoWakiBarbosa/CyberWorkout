@@ -81,13 +81,22 @@ a{
 /* /////////////////////////////
            MODAL
  ///////////////////////////// */
-
- #modal{
+ .modal-container{
+    background: #00000068;
+    width: 100%;
+    height: 100vh;
     position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    transform: translate(-50%,-50%);
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+ }
+ 
+
+ .modal{
     background-color: var(--rosa-fundo);
     display: grid;
     grid-template-areas: 
@@ -100,13 +109,23 @@ a{
     padding: 2em;
     width: 90%; 
     text-align: center;
+    box-shadow: 0 0 10px 0 #00000070;
+    overflow: hidden;
+    transition: width 0.15s, height 0.15s;
  }
+  
+  .modal-show {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
  .titulo{
     grid-area: titulo;
     font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 23px;
+    font-weight: 500;
+    font-family: var(--fonte);
+    margin-bottom: 10px;
  }
 
    #nome-pasta {
@@ -157,27 +176,7 @@ a{
  .botoes:active{
     opacity: 1;
  }
+
  
 
- #fade{
-    position: fixed;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000099;
-    z-index: 5;
- }
-
- #fade,
- #modal {
-   transition: 0.5s;
-   opacity: 1;
-   pointer-events: all;
- }
  
-#modal.hide,
-#fade.hide {
-  opacity: 0;
-  pointer-events:all;
-}

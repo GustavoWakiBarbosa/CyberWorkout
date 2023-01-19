@@ -36,6 +36,7 @@
     </header>
     
     <main>
+
         <section class="secao">
             <img src="assets/images/logo.svg" class="logo-pequena" alt="logo pequena">
             <h2>Treino</h2>
@@ -64,15 +65,16 @@
             </a>
         </section>
 
-        <div id="fade" class="hide">
-            <div id="modal" class="hide">
-                <label class="titulo" for="nome-pasta">Nova Pasta</label>
-                <input type="text" name="nome-pasta" placeholder="Digite o nome da pasta" id="nome-pasta">
-                <input type="button" class="botoes" id="button-cancelar" value="Cancelar">
-                <input type="button" class="botoes" id="button-criar" value="Criar">
-            </div>
-        </div>
     </main>
+
+    <div class="modal-container">
+        <div class="modal">
+            <label class="titulo" for="nome-pasta">Nova Pasta</label>
+            <input type="text" name="nome-pasta" placeholder="Digite o nome da pasta" id="nome-pasta">
+            <input type="button" class="botoes" id="button-cancelar" value="Cancelar">
+            <input type="button" class="botoes" id="button-criar" value="Criar">
+        </div>
+    </div>
 
     <script src="assets/js/index.js"></script>
 </body>
