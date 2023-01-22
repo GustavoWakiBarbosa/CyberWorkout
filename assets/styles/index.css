@@ -76,6 +76,7 @@ a{
     gap: 10px;
     background-color: var(--rosa-fundo);
     border-radius: 10px;
+    box-shadow: 0 0 10px 0 #00000070;
 }
 
 /* /////////////////////////////
@@ -128,7 +129,7 @@ a{
     margin-bottom: 10px;
  }
 
-   #nome-pasta {
+   #nomePasta {
     grid-area: texto;
     width: auto;
     border: 2px solid transparent;
@@ -142,14 +143,14 @@ a{
     letter-spacing: 1px;
   }
   
-  #nome-pasta:focus {
+  #nomePasta:focus {
     border: 2px solid var(--rosa);
     caret-color: var(--rosa);
     color: var(--rosa);
     box-shadow: 4px 4px 10px #070707;
   }
   
-  #nome-pastafocus::placeholder {
+  #nomePastafocus::placeholder {
     color: var(--rosa);
     font: var(--fonte);
   }
@@ -177,6 +178,28 @@ a{
     opacity: 1;
  }
 
- 
+ /* /////////////////////////////
+           PASTAS
+ ///////////////////////////// */
+.pastas{
+    background-color: var(--rosa-fundo);
+    margin: 0 2em;
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px 0 #00000070;
+}
+
+.container-pasta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--rosa-fundo);
+    margin: 1em 2em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #00000070;
+}
 
  
