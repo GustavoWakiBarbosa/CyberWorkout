@@ -1,9 +1,9 @@
-const button = document.querySelector('.button-pasta');
+const button = document.querySelector('.button-pasta')
 const buttonF = document.querySelector('#button-cancelar')
 const buttonC = document.querySelector('#button-criar')
-const container = document.querySelector('.modal-container');
-const modal = document.querySelector('.modal');
-const listaPastas = document.querySelector('.lista-pastas');
+const container = document.querySelector('.modal-container')
+const modal = document.querySelector('.modal')
+const listaPastas = document.querySelector('.lista-pastas')
 
 const activeModalClass = 'modal-show';
 
@@ -30,16 +30,21 @@ button.addEventListener('click', (event) => {
 
   buttonC.addEventListener('click', (event) => {
     event.preventDefault()
+    const inputNome = document.querySelector("#nomePasta")
     const nomePasta = document.querySelector("#nomePasta").value
     let template = document.querySelector("template");
     let itemNovo = template.content.cloneNode(true);
+    
     itemNovo = itemNovo.querySelector(".container-pasta")
-    // console.log(itemNovo.children[1])
     itemNovo.children[1].textContent = nomePasta
-    console.log(itemNovo)
+    listaPastas.appendChild(itemNovo)
+    inputNome.value = ""
+    const seta = document.querySelector('.seta')
+    closeModal()
+  })
 
-    const main = document.querySelector("main")
-    main.appendChild(itemNovo)
+  seta.addEventListener('click', (event) => {
+    console.log(seta)
   })
 
   // seta.addEventListener('click', () => {

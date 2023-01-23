@@ -192,14 +192,46 @@ a{
 }
 
 .container-pasta{
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    "seta titulo pontinhos"
+    "lista lista lista"
+    ;
     align-items: center;
     justify-content: space-between;
     background-color: var(--rosa-fundo);
-    margin: 1em 2em;
-    padding: 1em;
+    margin: 0em 2em 1em 2em;
+    padding: 0.5em 2em;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 #00000070;
 }
+
+.seta{
+    grid-area: seta;
+}
+
+.container-pasta > h2{
+    grid-area: titulo;
+}
+
+.pontinhos{
+    grid-area: pontinhos;
+}
+
+.treinos{
+    grid-area: lista;
+}
+
+.treino{
+    background-color: var(--roxo-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #00000070;
+    padding: 0.5em 2em;
+    margin: 1em 0;
+}
+
 
  
