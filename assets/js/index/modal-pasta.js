@@ -3,7 +3,6 @@ const buttonF = document.querySelector('#button-cancelar')
 const buttonC = document.querySelector('#button-criar')
 const container = document.querySelector('.modal-container')
 const modal = document.querySelector('.modal')
-const listaPastas = document.querySelector('.lista-pastas')
 
 const activeModalClass = 'modal-show';
 
@@ -27,28 +26,3 @@ button.addEventListener('click', (event) => {
     event.preventDefault()
     closeModal()
   })
-
-  buttonC.addEventListener('click', (event) => {
-    event.preventDefault()
-    const inputNome = document.querySelector("#nomePasta")
-    const nomePasta = document.querySelector("#nomePasta").value
-    let template = document.querySelector("template");
-    let itemNovo = template.content.cloneNode(true);
-    
-    itemNovo = itemNovo.querySelector(".container-pasta")
-    itemNovo.children[1].textContent = nomePasta
-    listaPastas.appendChild(itemNovo)
-    inputNome.value = ""
-    const seta = document.querySelector('.seta')
-    closeModal()
-  })
-
-  seta.addEventListener('click', (event) => {
-    console.log(seta)
-  })
-
-  // seta.addEventListener('click', () => {
-
-  // })
-
-  

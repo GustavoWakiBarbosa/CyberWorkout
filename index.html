@@ -50,7 +50,7 @@
         <section class="criar-treino">
             <h2>Meus Treinos</h2>
             <a href="">
-                <div class="container-criacao">
+                <div class="container-criacao button-treino">
                     <span class="material-icons">
                         note_add
                     </span>
@@ -67,30 +67,44 @@
             </a>
         </section>
 
+        <ul class="treinos">
+            <template class="template-treino">
+                <li class="treino" draggable="true">
+                    <h2>Pull</h2>
+                    <span class="material-symbols-outlined icons">
+                        more_horiz
+                  </span>
+                </li>
+            </template>
+         </ul>
+
         <ul class="lista-pastas">
-            <template>
+            <template class="template-pastas">
                 <div class="container-pasta">
-                    <span class="material-symbols-outlined seta">
-                       chevron_right
-                     </span>
+                        <!-- <span class="material-symbols-outlined seta">
+                           chevron_right
+                         </span> -->
                      <h2>Treino ABC Science Fitness</h2>
                      <span class="material-symbols-outlined icons pontinhos">
                           more_horiz
                     </span>
-                     <ul class="treinos">
-                        <li class="treino">
-                            <h2>Pull</h2>
-                            <span class="material-symbols-outlined icons">
-                                more_horiz
-                          </span>
-                        </li>
-                        <li class="treino">
-                            <h2>Push</h2>
-                            <span class="material-symbols-outlined icons">
-                                more_horiz
-                          </span>
-                        </li>
-                     </ul>
+                     <details>
+                        <summary>Treinos</summary>
+                         <ul class="treinos">
+                            <li class="treino">
+                                <h2>Pull</h2>
+                                <span class="material-symbols-outlined icons">
+                                    more_horiz
+                              </span>
+                            </li>
+                            <li class="treino">
+                                <h2>Push</h2>
+                                <span class="material-symbols-outlined icons">
+                                    more_horiz
+                              </span>
+                            </li>
+                         </ul>
+                     </detail>
                 </div>
         </template>
         </ul>
@@ -106,15 +120,18 @@
         </div>
     </div>
 
-    <!-- <div class="modal-container">
-        <div class="modal">
-            <label class="titulo" for="nome-pasta">Novo Treino</label>
-            <input type="text" name="nome-pasta" placeholder="Digite o nome do treino" id="nome-pasta">
-            <input type="button" class="botoes" id="button-cancelar" value="Cancelar">
-            <input type="button" class="botoes" id="button-criar" value="Criar">
+    <div class="modal-container-t">
+        <div class="modal-t">
+            <label class="titulo" for="nomePasta">Novo Treino</label>
+            <input type="text" name="nomePasta" placeholder="Digite o nome do treino" id="nomePasta-t">
+            <input type="button" class="botoes" id="button-cancelar-t" value="Cancelar">
+            <input type="button" class="botoes" id="button-criar-t" value="Criar">
         </div>
-    </div> -->
+    </div>
 
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/index/modal-pasta.js"></script>
+    <script src="assets/js/index/modal-treino.js"></script>
+    <script src="assets/js/index/pastas.js"></script>
+    <script src="assets/js/index/treino.js"></script>
 </body>
 </html>

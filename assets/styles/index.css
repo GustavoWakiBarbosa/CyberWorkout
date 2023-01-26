@@ -114,6 +114,39 @@ a{
     overflow: hidden;
     transition: width 0.15s, height 0.15s;
  }
+
+ .modal-container-t{
+    background: #00000068;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+ }
+ 
+
+ .modal-t{
+    background-color: var(--rosa-fundo);
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "texto texto"
+    "cancelar criar"
+    ;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 2em;
+    width: 90%; 
+    text-align: center;
+    box-shadow: 0 0 10px 0 #00000070;
+    overflow: hidden;
+    transition: width 0.15s, height 0.15s;
+ }
   
   .modal-show {
     opacity: 1;
@@ -155,6 +188,32 @@ a{
     font: var(--fonte);
   }
 
+  #nomePasta-t {
+    grid-area: texto;
+    width: auto;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid var(--branco);
+    caret-color: var(--branco);
+    background-color: var(--roxo-escuro);
+    padding: 0.5em;
+    transition: .5s linear;
+    font-family: var(--fonte);
+    letter-spacing: 1px;
+  }
+  
+  #nomePasta-t:focus {
+    border: 2px solid var(--rosa);
+    caret-color: var(--rosa);
+    color: var(--rosa);
+    box-shadow: 4px 4px 10px #070707;
+  }
+  
+  #nomePastafocus-t::placeholder {
+    color: var(--rosa);
+    font: var(--fonte);
+  }
+
  #button-cancelar{
     background-color: var(--roxo-escuro);
     grid-area: cancelar;
@@ -162,6 +221,17 @@ a{
  }
 
  #button-criar{
+    background-color: var(--roxo-escuro);
+    grid-area: criar;
+ }
+
+ #button-cancelar-t{
+    background-color: var(--roxo-escuro);
+    grid-area: cancelar;
+    width: auto;
+ }
+ 
+ #button-criar-t{
     background-color: var(--roxo-escuro);
     grid-area: criar;
  }
@@ -194,7 +264,7 @@ a{
 .container-pasta{
     display: grid;
     grid-template-areas: 
-    "seta titulo pontinhos"
+    "titulo titulo pontinhos"
     "lista lista lista"
     ;
     align-items: center;
@@ -206,20 +276,19 @@ a{
     box-shadow: 0 0 10px 0 #00000070;
 }
 
-.seta{
-    grid-area: seta;
-}
 
 .container-pasta > h2{
     grid-area: titulo;
+    font-size: 15px;
 }
 
 .pontinhos{
     grid-area: pontinhos;
 }
 
-.treinos{
+details{
     grid-area: lista;
+    margin-top: 0.5em;
 }
 
 .treino{
@@ -230,7 +299,7 @@ a{
     border-radius: 10px;
     box-shadow: 0 0 10px 0 #00000070;
     padding: 0.5em 2em;
-    margin: 1em 0;
+    margin: 1em 2em;
 }
 
 
