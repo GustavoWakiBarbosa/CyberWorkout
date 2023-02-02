@@ -1,3 +1,6 @@
+let lista = []
+
+
 buttonCT.addEventListener('click', (event) => {
     event.preventDefault()
     const inputNome = document.querySelector("#nomePasta-t")
@@ -9,16 +12,12 @@ buttonCT.addEventListener('click', (event) => {
 
     const listaTreinos = document.querySelector('.treinos')
     listaTreinos.appendChild(treino)
-
+    lista = document.querySelectorAll('.treino')
     inputNome.value = ""
     closeModalT()
   })
 
-const treinosArrastaveis = document.querySelectorAll(".treino']");
 
-treinosArrastaveis.forEach((treinoArrastevel) => {
-    treinoArrastevel.addEventListener("dragstart", comecarArrastar);
-})
 
 function comecarArrastar(){
     console.log("funcionou")
