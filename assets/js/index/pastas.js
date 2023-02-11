@@ -1,6 +1,6 @@
 const listaPastas = document.querySelector('.lista-pastas')
-const pontinhos = document.querySelector('.pontinhos')
 let listaColunas = []
+// let listaPontinhos = []
 
   buttonC.addEventListener('click', (event) => {
     event.preventDefault()
@@ -14,40 +14,26 @@ let listaColunas = []
     listaPastas.appendChild(itemNovo)
     inputNome.value = ""
     listaColunas = document.querySelectorAll('.treinos')
+    listaPontinhos = document.querySelectorAll('.pontinhos')
     closeModal()
   })
 
-  document.addEventListener("dragstart", (e) => {
-    e.target.classList.add("dragging");
-  });
-  
-  document.addEventListener("dragend", (e) => {
-    e.target.classList.remove("dragging");
-  });
-  
-  listaColunas.forEach((item) => {
-    item.addEventListener("dragover", (e) => {
-      const dragging = document.querySelector(".dragging");
-      const applyAfter = getNewPosition(item, e.clientY);
-  
-      if (applyAfter) {
-        applyAfter.insertAdjacentElement("afterend", dragging);
-      } else {
-        item.prepend(dragging);
-      }
-    });
-  });
-  
-  function getNewPosition(column, posY) {
-    const cards = column.querySelectorAll(".treino:not(.dragging)");
-    let result;
-  
-    for (let refer_card of cards) {
-      const box = refer_card.getBoundingClientRect();
-      const boxCenterY = box.y + box.height / 2;
-  
-      if (posY >= boxCenterY) result = refer_card;
+  // listaPontinhos.forEach((item) => {
+  //   item.addEventListener('click', (event) => {
+  //     console.log("pontinho")
+  //   })
+  // })
+
+  listaPastas.addEventListener("click", function(event){
+    let alvoEvento = event.target
+    if (alvoEvento.classList.contains("pontinhos")) {
+        let paiDoAlvo = alvoEvento.parentNode
+        paiDoAlvo.classList.add("fadeOut")
+        setTimeout(function(){
+          paiDoAlvo.remove()
+        },500)
+        
     }
-  
-    return result;
-  }
+  })
+
+ 
