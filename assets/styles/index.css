@@ -8,28 +8,6 @@ body{
     background-color: var(--roxo-escuro);
 }
 
-header{
-    width: 100%;
-    background-color: var(--rosa-fundo);
-    position: fixed;
-    position: absolute;
-    bottom: 0px;
-    padding: 0.5em 0;
-    border-top: 1px solid;
-    border-color: var(--branco);
-}
-
-nav{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-
-}
-
-a{
-    text-decoration: none;
-}
-
 .icons{
     color: var(--cinza-claro);
     font-size: 30px;

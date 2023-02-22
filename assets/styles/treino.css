@@ -1,0 +1,308 @@
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--roxo-escuro);
+}
+
+main{
+    padding: 5em 2em;
+}
+
+.secao{
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--rosa-fundo);
+    border-bottom: 1px solid;
+    border-color: var(--branco);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.icons-treino{
+    color: var(--roxo-fundo)
+}
+
+.secao > h3{
+    color: var(--roxo-fundo)
+}
+
+.add-exercicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--rosa-fundo);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #00000070;
+    padding: 0.5em 1em;
+}
+
+/* /////////////////////////////
+           MODAL
+ ///////////////////////////// */
+
+.modal-container{
+    background: #00000068;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+ }
+
+ .modal{
+    background-color: var(--rosa-fundo);
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "texto texto"
+    "cancelar criar"
+    ;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 2em;
+    width: 90%; 
+    text-align: center;
+    box-shadow: 0 0 10px 0 #00000070;
+    overflow: hidden;
+    transition: width 0.15s, height 0.15s;
+ }
+
+ .modal-container-ex{
+    background: #00000068;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+ }
+ 
+
+ .modal-ex{
+    background-color: var(--rosa-fundo);
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "texto texto"
+    "cancelar criar"
+    ;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 2em;
+    width: 90%; 
+    text-align: center;
+    box-shadow: 0 0 10px 0 #00000070;
+    overflow: hidden;
+    transition: width 0.15s, height 0.15s;
+ }
+  
+  .modal-show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .titulo{
+    grid-area: titulo;
+    font-weight: 600;
+    font-size: 23px;
+    font-weight: 500;
+    font-family: var(--fonte);
+    margin-bottom: 10px;
+ }
+
+   #nomePasta {
+    grid-area: texto;
+    width: auto;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid var(--branco);
+    caret-color: var(--branco);
+    background-color: var(--roxo-escuro);
+    padding: 0.5em;
+    transition: .5s linear;
+    font-family: var(--fonte);
+    letter-spacing: 1px;
+  }
+  
+  #nomePasta:focus {
+    border: 2px solid var(--rosa);
+    caret-color: var(--rosa);
+    color: var(--rosa);
+    box-shadow: 4px 4px 10px #070707;
+  }
+  
+  #nomePastafocus::placeholder {
+    color: var(--rosa);
+    font: var(--fonte);
+  }
+
+  #nomePasta-ex {
+    grid-area: texto;
+    width: auto;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid var(--branco);
+    caret-color: var(--branco);
+    background-color: var(--roxo-escuro);
+    padding: 0.5em;
+    transition: .5s linear;
+    font-family: var(--fonte);
+    letter-spacing: 1px;
+  }
+  
+  #nomePasta-ex:focus {
+    border: 2px solid var(--rosa);
+    caret-color: var(--rosa);
+    color: var(--rosa);
+    box-shadow: 4px 4px 10px #070707;
+  }
+  
+  #nomePastafocus-ex::placeholder {
+    color: var(--rosa);
+    font: var(--fonte);
+  }
+
+ #button-cancelar{
+    background-color: var(--roxo-escuro);
+    grid-area: cancelar;
+    width: auto;
+ }
+
+ #button-criar{
+    background-color: var(--roxo-escuro);
+    grid-area: criar;
+ }
+
+ #button-cancelar-ex{
+    background-color: var(--roxo-escuro);
+    grid-area: cancelar;
+    width: auto;
+ }
+ 
+ #button-criar-ex{
+    background-color: var(--roxo-escuro);
+    grid-area: criar;
+ }
+
+ .botoes{
+    border: none;
+    padding: 0.5em;
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: 0.2s;
+ }
+
+ .botoes:active{
+    opacity: 1;
+ }
+
+ /* /////////////////////////////
+           EXERCÍCIO
+ ///////////////////////////// */
+
+   .exercicio{
+      margin: 2em 0;
+      padding: 1em 1em;
+      display: grid;
+      justify-items: space-between;
+      align-items: center;
+      gap: 5px;
+      grid-template-areas:
+      "nome nome pontinhos pontinhos"
+      "obs obs obs obs"
+      "relogio tempo tempo tempo"
+      "teste teste teste teste"
+      ;
+      background-color: var(--rosa-fundo);
+      box-shadow: 0 0 10px 0 #00000070;
+      border-radius: 10px;
+   }
+
+   #obs{
+      grid-area: obs;
+      background-color: transparent;
+      border: none;
+      
+   }
+
+   #obs:focus{
+      outline: 10;
+      outline-color: var(--rosa);
+    }
+
+   .nome-ex{
+      grid-area: nome;
+   }
+
+   .pontinhos{
+      grid-area: pontinhos;
+      justify-self: flex-end;
+   }
+
+   .relogio{
+      grid: relogio;
+      /* justify-self: center; */
+   }
+
+   .tempo{
+      grid-area: tempo;
+      margin-right: 6em;
+   }
+
+   .descanso{
+      color: var(--cinza);
+      width: em;
+   }
+
+   .descanso > option{
+      color: var(--cinza);
+   }
+
+   .descanso:focus{
+      outline: 10;
+      outline-color: var(--rosa);
+   }
+   
+   .teste{
+      grid-area: teste;
+   }
+
+   .ex-guia{
+      padding: 0.5em;
+      display: flex;
+      margin: 1em 0 0 0;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .ex-info{
+      background-color: var(--roxo-escuro);
+      padding: 0.5em 0.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 5px;
+      margin: 0.5em 0;
+   }
+
+   .check-ex{
+      background-color: var(--rosa-fundo);
+      border-radius: 5px;
+      padding: 1px;
+   }
