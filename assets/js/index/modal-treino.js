@@ -9,18 +9,17 @@ const activeModalClassT = 'modal-show';
 const openModalT = () => containerT.classList.add(activeModalClassT);
 const closeModalT = () => containerT.classList.remove(activeModalClassT);
 
-buttonT.addEventListener('click', openModalT);
+buttonT.addEventListener('click', (event) => {
+    event.preventDefault()
+    openModalT()
+  })
+  
 containerT.addEventListener('click', (event) => {
     if (modalT.contains(event.target)) return;
     
     closeModalT();
 });
 
-buttonT.addEventListener('click', (event) => {
-    event.preventDefault()
-    openModalT()
-  })
-  
 buttonFT.addEventListener('click', (event) => {
     event.preventDefault()
     closeModalT()

@@ -1,6 +1,5 @@
 let lista = []
 
-
 buttonCT.addEventListener('click', (event) => {
     event.preventDefault()
     const inputNome = document.querySelector("#nomePasta-t")

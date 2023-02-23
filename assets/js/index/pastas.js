@@ -5,7 +5,7 @@ let listaColunas = []
   buttonC.addEventListener('click', (event) => {
     event.preventDefault()
     const inputNome = document.querySelector("#nomePasta")
-    const nomePasta = document.querySelector("#nomePasta").value
+    const nomePasta = inputNome.value
     let template = document.querySelector(".template-pastas");
     let itemNovo = template.content.cloneNode(true);
     
