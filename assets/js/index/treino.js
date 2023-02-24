@@ -18,27 +18,27 @@ buttonCT.addEventListener('click', (event) => {
 
 
 
-  let treinos = document.querySelectorAll(".treinos");
-  let treino = document.querySelectorAll(".treino");
+  // let treinos = document.querySelectorAll(".treinos");
+  // let treino = document.querySelectorAll(".treino");
 
-treino.forEach(function(treino) {
-  treino.addEventListener("dragstart", function(e) {
-    e.dataTransfer.setData("text/plain", treino.id);
-  });
-});
+// treino.forEach(function(treino) {
+//   treino.addEventListener("dragstart", function(e) {
+//     e.dataTransfer.setData("text/plain", treino.id);
+//   });
+// });
 
-treinos.forEach(function(treinos) {
-  treinos.addEventListener("dragover", function(e) {
-    e.preventDefault();
-  });
+// treinos.forEach(function(treinos) {
+//   treinos.addEventListener("dragover", function(e) {
+//     e.preventDefault();
+//   });
 
-  treinos.addEventListener("drop", function(e) {
-    e.preventDefault();
-    let idTreino = e.dataTransfer.getData("text");
-    let treino = document.getElementById(idTreino);
-    treinos.appendChild(treino);
-  });
-});
+//   treinos.addEventListener("drop", function(e) {
+//     e.preventDefault();
+//     let idTreino = e.dataTransfer.getData("text");
+//     let treino = document.getElementById(idTreino);
+//     treinos.appendChild(treino);
+//   });
+// });
 
 
 

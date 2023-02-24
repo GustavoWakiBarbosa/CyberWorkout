@@ -16,9 +16,12 @@ buttonC.addEventListener('click', (event) => {
 
 listaEx.addEventListener("input", function(event) {
     let alvoEvento = event.target;
+    console.log('entrou')
     if (alvoEvento.id == 'obs') {
       let numLinhasQuebradas = alvoEvento.value.split('\n').length;
       alvoEvento.rows = numLinhasQuebradas;
     }
   });
+
+  
   

@@ -291,6 +291,7 @@ main{
       margin: 1em 0 0 0;
       justify-content: space-between;
       align-items: center;
+      text-align: center;
    }
 
    .ex-info{
@@ -302,6 +303,7 @@ main{
       border-radius: 5px;
       margin: 0.5em 0;
       box-shadow: 0 0 1px 0 #00000070;
+      text-align: center;
    }
 
    .check-ex{
