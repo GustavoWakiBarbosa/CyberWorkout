@@ -219,28 +219,36 @@ main{
    .exercicio{
       margin: 2em 0;
       padding: 1em 1em;
-      display: grid;
+      /* display: grid;
       justify-items: space-between;
-      align-items: center;
+      align-items: center; */
       gap: 5px;
-      grid-template-areas:
+      /* grid-template-areas:
       "nome nome pontinhos pontinhos"
       "obs obs obs obs"
       "relogio tempo tempo tempo"
       "teste teste teste teste"
-      ;
+      ; */
       background-color: var(--rosa-fundo);
       box-shadow: 0 0 10px 0 #00000070;
       border-radius: 10px;
    }
 
+   .nome{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
    #obs{
-      grid-area: obs;
+      /* grid-area: obs; */
+      display: block;
+      width: -webkit-fill-available;
       background-color: transparent;
       border: none;
       height: auto;
       min-width: 100px;
-      
+      margin: 0.5em 0;
    }
 
    #obs:focus{
@@ -248,24 +256,30 @@ main{
       outline-color: var(--rosa);
     }
 
-   .nome-ex{
-      grid-area: nome;
-   }
+    .area-tempo{
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
 
-   .pontinhos{
+   /* .nome-ex{
+      grid-area: nome;
+   } */
+
+   /* .pontinhos{
       grid-area: pontinhos;
       justify-self: flex-end;
-   }
-
+   } */
+/* 
    .relogio{
       grid: relogio;
-      /* justify-self: center; */
-   }
+      
+   } */
 
-   .tempo{
+   /* .tempo{
       grid-area: tempo;
       margin-right: 6em;
-   }
+   } */
 
    .descanso{
       color: var(--branco);
@@ -284,33 +298,75 @@ main{
    }
    
    .series{
-      grid-area: teste;
+      /* grid-area: teste; */
       text-align: center;
    }
 
    .ex-guia{
-      padding: 0.5em;
-      display: flex;
-      margin: 1em 0 0 0;
-      justify-content: space-between;
+      display: grid;
+      grid-template-areas: 
+      "g-serie g-peso g-rep g-check"
+      ;
+      grid-template-columns: 5.5em 5.5em 5.5em 5.5em;
+      grid-template-rows: 1fr;
       align-items: center;
-      text-align: center;
+      justify-items: center;
+      padding: 0.5em 0.5em;
+      margin: 1em 0 0 0;
+   }
+
+   .g-serie{
+      grid-area: g-serie;
+   }
+
+   .g-peso{
+      grid-area: g-peso;
+   }
+
+   .g-rep{
+      grid-area: g-rep;
+   }
+
+   .g-check{
+      grid-area: g-check;
+      width: 1.5em;
    }
 
    .ex-info{
+      display: grid;
+      grid-template: 
+      "serie peso rep check";
+      grid-template-columns: 5.5em 5.5em 5.5em 5.5em;
+      grid-template-rows: 1fr;
+      align-items: center;
+      justify-items: center;
       background-color: var(--roxo-escuro);
       padding: 0.5em 0.5em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       border-radius: 5px;
       margin: 0.5em 0;
       box-shadow: 0 0 1px 0 #00000070;
    }
 
+   .serie{
+      grid: serie;
+      padding: 0.3em 0;
+   }
+   
+   .peso{
+      grid-area: peso;
+      padding: 0.3em 0;
+   }
+
+   .rep{
+      grid-area: rep;
+      padding: 0.3em 0;
+   }
+
    .check-ex{
+      grid-area: check;
       background-color: var(--rosa-fundo);
       border-radius: 5px;
+      width: 1.5em;
       padding: 1px;
    }
 

@@ -1,6 +1,5 @@
 listaEx.addEventListener("click", function(event) {
     let alvoEvento = event.target;
-    console.log(alvoEvento)
     if (alvoEvento.id == 'add-serie') {
       paiDoAlvo = alvoEvento.parentNode
       listaSeries = paiDoAlvo.querySelector('.lista-series')
@@ -15,6 +14,13 @@ listaEx.addEventListener("click", function(event) {
       }else{
         alvoEvento.classList.add("feito")
       }
-      
+    }else if(alvoEvento.classList.contains("pontinhos")){
+      let paiDoAlvo = alvoEvento.parentNode.parentNode
+        paiDoAlvo.classList.add("fadeOut")
+        setTimeout(function(){
+          paiDoAlvo.remove()
+        },500)
+    }else if(alvoEvento.hasAttribute("contenteditable")){
+      alvoEvento.textContent = ""
     }
   });

@@ -56,49 +56,45 @@
             <h2>Adicionar Exercício</h2>
         </div>
 
-        <div class="modal-container-ex" >
-            <div class="modal-ex">
-                <label class="titulo" for="nomePasta">Novo Exercício</label>
-                <input type="text" name="nomePasta" placeholder="Digite o nome do exercício" id="nomePasta-ex">
-                <input type="button" class="botoes" id="button-cancelar-ex" value="Cancelar">
-                <input type="button" class="botoes" id="button-criar-ex" value="Adicionar">
-            </div>
-        </div>
-
 
         <ul class="lista-ex">
             <template class="template-ex">
                 <li>
                     <div class="exercicio">
-                        <h2 class="nome-ex">Supino Reto com Halter</h2>
-                        <span class="material-symbols-outlined icons pontinhos">
-                                more_horiz
-                        </span>
-                        <textarea id="obs" name="obs" placeholder="Coloque suas Observaçõs aqui" rows="1" style="resize: none;"></textarea>
-                        <span class="material-symbols-outlined relogio">
-                            more_time
-                        </span>
-                        <div class="tempo">
-                            <label for="horario" class="label-descanso">Descanso:</label>
-                            <select class="descanso" name="descanso" id="descanso"><option value="0">OFF</option><option value="5">5s</option><option value="10">10s</option><option value="15">15s</option><option value="20">20s</option><option value="25">25s</option><option value="30">30s</option><option value="35">35s</option><option value="40">40s</option><option value="45">45s</option><option value="50">50s</option><option value="55">55s</option><option value="60">1min 0s</option><option value="65">1min 5s</option><option value="70">1min 10s</option><option value="75">1min 15s</option><option value="80">1min 20s</option><option value="85">1min 25s</option><option value="90">1min 30s</option><option value="95">1min 35s</option><option value="100">1min 40s</option><option value="105">1min 45s</option><option value="110">1min 50s</option><option value="115">1min 55s</option><option value="120">2min 0s</option><option value="135">2min 15s</option><option value="150">2min 30s</option><option value="165">2min 45s</option><option value="180">3min 0s</option><option value="195">3min 15s</option><option value="210">3min 30s</option><option value="225">3min 45s</option><option value="240">4min 0s</option><option value="255">4min 15s</option><option value="270">4min 30s</option><option value="285">4min 45s</option><option value="300">5min 0s</option></select>    
+                        <div class="nome">
+                            <h2 class="nome-ex">Supino Reto com Halter</h2>
+                            <span class="material-symbols-outlined icons pontinhos">
+                                    more_horiz
+                            </span>
                         </div>
-            
+                
+                         <textarea id="obs" name="obs" placeholder="Coloque suas Observaçõs aqui" rows="1" style="resize: none;"></textarea>
+
+                        <div class="area-tempo">    
+                            <span class="material-symbols-outlined relogio">
+                                more_time
+                            </span>
+                            <div class="tempo">
+                                <label for="horario" class="label-descanso">Descanso:</label>
+                                <select class="descanso" name="descanso" id="descanso"><option value="0">OFF</option><option value="5">5s</option><option value="10">10s</option><option value="15">15s</option><option value="20">20s</option><option value="25">25s</option><option value="30">30s</option><option value="35">35s</option><option value="40">40s</option><option value="45">45s</option><option value="50">50s</option><option value="55">55s</option><option value="60">1min 0s</option><option value="65">1min 5s</option><option value="70">1min 10s</option><option value="75">1min 15s</option><option value="80">1min 20s</option><option value="85">1min 25s</option><option value="90">1min 30s</option><option value="95">1min 35s</option><option value="100">1min 40s</option><option value="105">1min 45s</option><option value="110">1min 50s</option><option value="115">1min 55s</option><option value="120">2min 0s</option><option value="135">2min 15s</option><option value="150">2min 30s</option><option value="165">2min 45s</option><option value="180">3min 0s</option><option value="195">3min 15s</option><option value="210">3min 30s</option><option value="225">3min 45s</option><option value="240">4min 0s</option><option value="255">4min 15s</option><option value="270">4min 30s</option><option value="285">4min 45s</option><option value="300">5min 0s</option></select>    
+                            </div>
+                        </div>
                         
                        <div class="series">
                             <div class="ex-guia">
-                                <h3>Serie</h3>
-                                <h3>Peso</h3>
-                                <h3>Repetições</h3>
-                                <span class="material-symbols-outlined">
+                                <h3 class="g-serie">Serie</h3>
+                                <h3 class="g-peso">Peso</h3>
+                                <h3 class="g-rep">Repetições</h3>
+                                <span class="material-symbols-outlined g-check">
                                     done
                                 </span>
                             </div>
                             <ul class="lista-series">
                                 <template class="template-serie">
                                     <li class="ex-info">
-                                        <h4>N</h4>
-                                        <h4 contenteditable="true">-</h4>
-                                        <h4 contenteditable="true">-</h4>
+                                        <h4 class="serie">N</h4>
+                                        <h4 contenteditable="true" class="peso">-</h4>
+                                        <h4 contenteditable="true" class="rep">-</h4>
                                         <span class="material-symbols-outlined check-ex">done
                                         </span>
                                     </li>
@@ -112,6 +108,15 @@
                 </li>
             </template>
         </ul>
+
+        <div class="modal-container-ex" >
+            <div class="modal-ex">
+                <label class="titulo" for="nomePasta">Novo Exercício</label>
+                <input type="text" name="nomePasta" placeholder="Digite o nome do exercício" id="nomePasta-ex">
+                <input type="button" class="botoes" id="button-cancelar-ex" value="Cancelar">
+                <input type="button" class="botoes" id="button-criar-ex" value="Adicionar">
+            </div>
+        </div>
     </main>
 
     <script src="assets/js/treino/modal-ex.js"></script>
