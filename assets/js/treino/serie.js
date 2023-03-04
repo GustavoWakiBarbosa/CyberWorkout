@@ -1,5 +1,5 @@
 listaEx.addEventListener("click", function(event) {
-    let alvoEvento = event.target;
+    var alvoEvento = event.target;
     if (alvoEvento.id == 'add-serie') {
       paiDoAlvo = alvoEvento.parentNode
       listaSeries = paiDoAlvo.querySelector('.lista-series')
@@ -43,19 +43,23 @@ listaEx.addEventListener("click", function(event) {
         closeModalT();
         })
 
-        modalTipo.addEventListener("click", function(event) {
-          console.log(alvoEvento)
-          alvoTipo = event.target
-          if(alvoTipo.classList.contains("warm-up")){
-            alvoEvento.textContent = "W"
-            alvoEvento.style.color = "#ffc124"
-          }else if(alvoTipo.classList.contains("normal")){
-            alvoEvento.textContent = "N"
-            alvoEvento.style.color = "#FFFFFF"
-          }else if(alvoTipo.classList.contains("failure")){
-            alvoEvento.textContent = "F"
-            alvoEvento.style.color = "#ff0808"
-          }
-        })
+      modalTipo.addEventListener("click", function(event2) {
+        console.log(alvoEvento)
+        alvoTipo = event2.target
+        if(alvoTipo.classList.contains("warm-up")){
+          alvoEvento.textContent = "W"
+          alvoEvento.style.color = "#ffc124"
+        }else if(alvoTipo.classList.contains("normal")){
+          alvoEvento.textContent = "N"
+          alvoEvento.style.color = "#FFFFFF"
+        }else if(alvoTipo.classList.contains("failure")){
+          alvoEvento.textContent = "F"
+          alvoEvento.style.color = "#ff0808"
+        }else if(alvoTipo.classList.contains("drop")){
+          alvoEvento.textContent = "D"
+          alvoEvento.style.color = "#0095ff"
+        }
+        alvoEvento = null
+      })
     }
   });
