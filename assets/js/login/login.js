@@ -32,7 +32,7 @@ aluno.addEventListener("click", () => {
 
 btnEntrar.addEventListener("click", () => {
     if(email.value === "teste@gmail.com" && senha.value === "123"){
-        window.location.href = "../index.html";
+        // window.location.href = "../index.html";
     }else if(email.value === "" && senha.value === ""){
         email.classList.add("teste")
         senha.classList.add("teste")
